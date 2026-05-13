@@ -1,0 +1,21 @@
+{
+  "name": "kai-observability",
+  "description": "Kayoridolfi AI Plugin — processo de design e revisão de observabilidade (logs, métricas, traces, alertas, SLOs) stack-agnostic",
+  "version": "2.0.0",
+  "author": {
+    "name": "Kayoridolfi",
+    "email": "kayocdi@gmail.com"
+  },
+  "homepage": "https://github.com/kayorid/kai-ai-sdk",
+  "repository": "https://github.com/kayorid/kai-ai-sdk",
+  "license": "Proprietary",
+  "keywords": [
+    "kai",
+    "observability",
+    "telemetry",
+    "SLO",
+    "logs",
+    "metrics",
+    "traces"
+  ]
+}

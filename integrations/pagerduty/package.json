@@ -1,0 +1,13 @@
+{
+  "name": "kai-pagerduty-webhook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kayoridolfi AI Plugin · webhook PagerDuty → gera runbook automático",
+  "type": "module",
+  "engines": { "node": ">=20.0.0" },
+  "scripts": {
+    "start": "node webhook.js",
+    "dev": "KAI_MOCK_PAGERDUTY=1 node webhook.js --mock mock-fixtures/inc-demo.json",
+    "test": "node --test test/"
+  }
+}

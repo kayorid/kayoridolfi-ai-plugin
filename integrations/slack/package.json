@@ -1,0 +1,18 @@
+{
+  "name": "kai-slack-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kayoridolfi AI Plugin · Slack bot (Bolt JS) — comandos /kai-* expostos via Slack",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "KAI_MOCK_SLACK=1 node app.js",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "@slack/bolt": "^3.21.0"
+  }
+}

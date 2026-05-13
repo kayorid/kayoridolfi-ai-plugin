@@ -1,0 +1,49 @@
+# Kayoridolfi AI Slack App — manifesto declarativo
+# Use no Slack App Configuration > Manifest > Edit Manifest
+# Documentação: https://api.slack.com/reference/manifests
+
+display_information:
+  name: Kayoridolfi AI
+  description: Harness corporativo de desenvolvimento assistido por IA do Kayoridolfi
+  background_color: "#E8550C"
+  long_description: |
+    Kayoridolfi AI é o harness oficial de IA do projeto. Este bot expõe comandos do SDK no Slack
+    (status do squad, dashboard, custo, propostas) e envia notificações de eventos
+    relevantes (releases, achievements, exceções de segurança).
+
+features:
+  bot_user:
+    display_name: Kayoridolfi AI
+    always_online: true
+
+  slash_commands:
+    - command: /kai
+      url: https://kai-bot.example.com/slack/commands
+      description: Comandos do Kayoridolfi AI Plugin
+      usage_hint: "help | status | dashboard | cost | propose"
+      should_escape: false
+
+oauth_config:
+  scopes:
+    bot:
+      - chat:write
+      - chat:write.public
+      - commands
+      - users:read
+      - users:read.email
+      - channels:read
+      - groups:read
+      - reactions:write
+
+settings:
+  event_subscriptions:
+    request_url: https://kai-bot.example.com/slack/events
+    bot_events:
+      - app_mention
+      - message.im
+  interactivity:
+    is_enabled: true
+    request_url: https://kai-bot.example.com/slack/interact
+  org_deploy_enabled: true
+  socket_mode_enabled: false
+  token_rotation_enabled: true

@@ -1,0 +1,20 @@
+{
+  "name": "kai-sdd",
+  "description": "Kayoridolfi AI Plugin — ciclo Spec-Driven Development rígido com checkpoints obrigatórios, audit-trail e integração com o ecossistema",
+  "version": "2.0.0",
+  "author": {
+    "name": "Kayoridolfi",
+    "email": "kayocdi@gmail.com"
+  },
+  "homepage": "https://github.com/kayorid/kai-ai-sdk",
+  "repository": "https://github.com/kayorid/kai-ai-sdk",
+  "license": "Proprietary",
+  "keywords": [
+    "kai",
+    "sdd",
+    "spec-driven",
+    "EARS",
+    "checkpoints",
+    "audit"
+  ]
+}

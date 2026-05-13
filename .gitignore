@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# .kai/ é gerado nos repos dos squads (bootstrap output) — não pertence ao SDK
+# Aqui só existe se tests/smoke rodaram em modo que cria audit logs.
+.kai/
+
+# Snapshots locais (caso testes ou desenvolvimento criem)
+.kai/_snapshots/
+
+# Outputs de teste temporários
+/tmp-test/
+test-output.log
+docs/newsletter/*.md
+docs/newsletter/*.html

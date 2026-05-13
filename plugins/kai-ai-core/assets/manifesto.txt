@@ -1,0 +1,14 @@
+Processo antes do código. Evidência antes do "pronto".
+Auditável por princípio. Seguro por padrão. IA com governança.
+Velocidade sem atalhos. Disciplina hoje, intuição amanhã.
+Especificação é contrato. Retrospectiva é presente para o próximo dev.
+Aprendizado coletivo. Constituição viva. Decisões deixam rastro.
+Stack é escolha. Processo é compromisso.
+Hooks não bloqueiam você — bloqueiam o seu pior dia.
+A IA é colega de dupla, não substituta. Você pensa, ela escala.
+O melhor código não é o que você escreve hoje — é o que alguém entende em três anos.
+Construímos para usuários. Documentamos para nós. Aprendemos para sempre.
+Erros viram aprendizado. Aprendizado vira regra. Regra vira reflexo.
+Cada commit é uma promessa. Cada spec é um contrato. Cada review é cuidado.
+Velocidade real é não voltar. Qualidade real é dormir tranquilo.
+Open source. Sem amarras. Para qualquer time. Para qualquer stack.

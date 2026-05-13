@@ -1,0 +1,4 @@
+  ╱▔▔▔╲   Kayoridolfi AI Plugin
+ ╱     ╲  Engineering Harness for Claude Code
+ ╲     ╱  v2.0.0 · Open source · Process > Stack
+  ╲▁▁▁╱

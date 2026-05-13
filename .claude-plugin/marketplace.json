@@ -1,0 +1,66 @@
+{
+  "name": "kai",
+  "description": "Kayoridolfi AI Plugin — harness open-source de desenvolvimento assistido por IA: constitution, SDD, review, observability, security, retros, cost e evals",
+  "owner": {
+    "name": "Kayo Ridolfi",
+    "email": "kayocdi@gmail.com",
+    "url": "https://github.com/kayorid"
+  },
+  "plugins": [
+    {
+      "name": "kai-ai-core",
+      "description": "Obrigatório — constitution, hooks bloqueantes, MCP allowlist, comandos base, achievements, doctor, dashboard, snapshot",
+      "version": "2.0.0",
+      "source": "./plugins/kai-ai-core"
+    },
+    {
+      "name": "kai-bootstrap",
+      "description": "Onboarding híbrido de squad: análise automática + entrevista guiada + plano de enriquecimento",
+      "version": "2.0.0",
+      "source": "./plugins/kai-bootstrap"
+    },
+    {
+      "name": "kai-sdd",
+      "description": "Spec-Driven Development rígido com checkpoints obrigatórios e audit-trail",
+      "version": "2.0.0",
+      "source": "./plugins/kai-sdd"
+    },
+    {
+      "name": "kai-review",
+      "description": "Code review, security review e spec coverage como agentes formais",
+      "version": "2.0.0",
+      "source": "./plugins/kai-review"
+    },
+    {
+      "name": "kai-observability",
+      "description": "Design e revisão de observabilidade stack-agnostic (logs, métricas, traces, alertas, SLOs)",
+      "version": "2.0.0",
+      "source": "./plugins/kai-observability"
+    },
+    {
+      "name": "kai-security",
+      "description": "Threat modeling, compliance regulatório, padrões cripto e hooks bloqueantes específicos",
+      "version": "2.0.0",
+      "source": "./plugins/kai-security"
+    },
+    {
+      "name": "kai-retro",
+      "description": "Retrospectivas estruturadas, extração de learnings e memória organizacional",
+      "version": "2.0.0",
+      "source": "./plugins/kai-retro"
+    },
+    {
+      "name": "kai-cost",
+      "description": "Exposição de custo de IA — captura tokens, agrega por fase/feature/dia, alertas de budget",
+      "version": "2.0.0",
+      "source": "./plugins/kai-cost"
+    },
+    {
+      "name": "kai-evals",
+      "description": "Eval framework para features que usam IA em runtime — datasets golden, rubricas, runners, A/B compare, integração CI",
+      "version": "2.0.0",
+      "source": "./plugins/kai-evals"
+    }
+  ],
+  "version": "2.0.0"
+}

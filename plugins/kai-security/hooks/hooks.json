@@ -1,0 +1,16 @@
+{
+  "_comment": "v0.3.2 — hooks Write|Edit consolidados em pre-write-guard.sh (M-1 do REVIEW.md). Substitui as entradas separadas, lendo o payload PreToolUse uma única vez e despachando para pii-scan + private-key-scan + secret-scan internamente. Cada scanner permanece executável standalone para debug.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/scripts/pre-write-guard.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

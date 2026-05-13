@@ -1,0 +1,21 @@
+{
+  "name": "kai-ai-core",
+  "description": "Kayoridolfi AI Plugin — plugin obrigatório com constitution, hooks bloqueantes de segurança/compliance, MCP allowlist e comandos base",
+  "version": "2.0.0",
+  "author": {
+    "name": "Kayoridolfi",
+    "email": "kayocdi@gmail.com"
+  },
+  "homepage": "https://github.com/kayorid/kai-ai-sdk",
+  "repository": "https://github.com/kayorid/kai-ai-sdk",
+  "license": "Proprietary",
+  "keywords": [
+    "kai",
+    "opensource",
+    "sdk",
+    "core",
+    "constitution",
+    "compliance",
+    "security"
+  ]
+}

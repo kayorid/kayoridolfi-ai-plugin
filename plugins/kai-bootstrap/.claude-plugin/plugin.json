@@ -1,0 +1,19 @@
+{
+  "name": "kai-bootstrap",
+  "description": "Kayoridolfi AI Plugin — onboarding híbrido de squad: análise automática de repo + entrevista guiada + plano de enriquecimento contínuo",
+  "version": "2.0.0",
+  "author": {
+    "name": "Kayoridolfi",
+    "email": "kayocdi@gmail.com"
+  },
+  "homepage": "https://github.com/kayorid/kai-ai-sdk",
+  "repository": "https://github.com/kayorid/kai-ai-sdk",
+  "license": "Proprietary",
+  "keywords": [
+    "kai",
+    "bootstrap",
+    "onboarding",
+    "context",
+    "squad"
+  ]
+}
