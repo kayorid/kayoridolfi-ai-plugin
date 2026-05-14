@@ -25,7 +25,7 @@ Novo hook `Stop`/`SessionEnd` (`cost-finalize.sh`) lê o transcript JSONL e agre
 ### Validação
 
 - 10 plugins · 15 skills · 67 comandos `/kai-*` · 12 hooks
-- Completeness 183 · smoke 127 · e2e 9 (todas verdes)
+- Completeness 183 · smoke 127 · e2e 11 (todas verdes)
 - Bump v2.0.0 → v2.1.0 sincronizado em todos manifests + marketplace + install.sh
 
 ### Sem breaking changes

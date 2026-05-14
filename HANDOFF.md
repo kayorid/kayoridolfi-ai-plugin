@@ -28,7 +28,7 @@
 - **3 integrações reais**: Slack (Bolt JS / Node 20), Jira (adapter shell), PagerDuty (webhook Node)
 - **183 itens** validados pelo completeness-check
 - **127 smoke tests** (execução real de hooks + integrações + comandos)
-- **9 testes E2E** num sandbox temporário (`tests/e2e/run.sh`)
+- **11 testes E2E** num sandbox temporário (`tests/e2e/run.sh`)
 - **node:test**: 4 slack + 1 pagerduty
 - **Instalador one-shot:** `bash scripts/install.sh` (idempotente, modos `local`/`github`)
 
@@ -49,7 +49,7 @@ git status
 git log --oneline -5
 bash tests/completeness-check.sh   # esperado: 183 completo · 0 faltando
 bash tests/smoke/run.sh            # esperado: 127 OK · 0 falhas
-bash tests/e2e/run.sh              # esperado: 9 OK · 0 falhas
+bash tests/e2e/run.sh              # esperado: 11 OK · 0 falhas
 ```
 
 Esperado: working tree limpo, todas as suites verde.
@@ -126,7 +126,7 @@ Esperado: `183 completo · 0 faltando`. Loop iterativo — repita até zerar.
 bash tests/e2e/run.sh
 ```
 
-Esperado: `9 OK · 0 falhas`. Ciclo completo (init → spec → review → retro) num sandbox temporário.
+Esperado: `11 OK · 0 falhas`. Ciclo completo (init → spec → review → retro) num sandbox temporário.
 
 ### CI no GitHub
 

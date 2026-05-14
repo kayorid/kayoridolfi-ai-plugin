@@ -12,7 +12,7 @@ Highlights:
 - **Novo plugin `kai-intel`** — `/kai-graph-add|query|export`, `/kai-search` (BM25), `/kai-drift-check`
 - **Telemetria opt-in** — `/kai-telemetry` 100% local, sem rede, padrão desligado
 - **`kai-cost` transcript-based** — novo hook `Stop`/`SessionEnd` (`cost-finalize.sh`) lê transcript JSONL e agrega usage real por modelo. Resolve limitação conhecida da v1.x.
-- **Testes:** completeness 183 · smoke 127 · e2e 9
+- **Testes:** completeness 183 · smoke 127 · e2e 11
 
 Sem breaking changes. Comandos v2.0 continuam funcionando.
 
