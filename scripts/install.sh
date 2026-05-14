@@ -61,7 +61,7 @@ case "$MODE" in
     printf "${C_BOLD}Próximos passos — execute dentro do Claude Code:${C_RESET}\n\n"
     hint "1. Registrar o marketplace:"
     printf "       ${C_BOLD}/plugin marketplace add %s${C_RESET}\n\n" "$REPO_ROOT"
-    hint "2. Instalar os 9 plugins:"
+    hint "2. Instalar os 10 plugins:"
     printf "       ${C_BOLD}/plugin install kai-ai-core@kai${C_RESET}\n"
     printf "       ${C_BOLD}/plugin install kai-bootstrap@kai${C_RESET}\n"
     printf "       ${C_BOLD}/plugin install kai-sdd@kai${C_RESET}\n"
@@ -70,7 +70,8 @@ case "$MODE" in
     printf "       ${C_BOLD}/plugin install kai-security@kai${C_RESET}\n"
     printf "       ${C_BOLD}/plugin install kai-retro@kai${C_RESET}\n"
     printf "       ${C_BOLD}/plugin install kai-cost@kai${C_RESET}\n"
-    printf "       ${C_BOLD}/plugin install kai-evals@kai${C_RESET}\n\n"
+    printf "       ${C_BOLD}/plugin install kai-evals@kai${C_RESET}\n"
+    printf "       ${C_BOLD}/plugin install kai-intel@kai${C_RESET}\n\n"
     hint "3. Validar:"
     printf "       ${C_BOLD}/kai-doctor${C_RESET}\n\n"
     hint "Alternativa: usar marketplace publicado no GitHub (sem clonar):"
@@ -106,7 +107,8 @@ case "$MODE" in
           "kai-security@kai": true,
           "kai-retro@kai": true,
           "kai-cost@kai": true,
-          "kai-evals@kai": true
+          "kai-evals@kai": true,
+          "kai-intel@kai": true
         })
     ')
 

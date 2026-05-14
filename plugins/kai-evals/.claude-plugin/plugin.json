@@ -1,7 +1,7 @@
 {
   "name": "kai-evals",
   "description": "Kayoridolfi AI — eval framework para features que usam IA em runtime. Datasets golden, rubricas (determinística + LLM-as-judge + custom), runners, comparação A/B de prompts e modelos, integração CI.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": {
     "name": "Kayoridolfi",
     "email": "kayocdi@gmail.com"

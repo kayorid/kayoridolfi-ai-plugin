@@ -1,7 +1,7 @@
 {
   "name": "kai-cost",
   "description": "Kayoridolfi AI — exposição de custo de IA por fase, feature, dia e dev. Hook captura uso de tokens; comandos agregam e mostram.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": {
     "name": "Kayoridolfi",
     "email": "kayocdi@gmail.com"

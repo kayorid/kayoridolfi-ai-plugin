@@ -1,0 +1,19 @@
+{
+  "name": "kai-intel",
+  "description": "Kayoridolfi AI — inteligência operacional: grafo de decisões cross-squad, busca lexical com ranking BM25 sobre artefatos .kai/, drift detection entre spec e código.",
+  "version": "2.1.0",
+  "author": {
+    "name": "Kayoridolfi",
+    "email": "kayocdi@gmail.com"
+  },
+  "homepage": "https://github.com/kayorid/kayoridolfi-ai-plugin",
+  "repository": "https://github.com/kayorid/kayoridolfi-ai-plugin",
+  "license": "MIT",
+  "keywords": [
+    "kai",
+    "knowledge-graph",
+    "search",
+    "drift-detection",
+    "intel"
+  ]
+}

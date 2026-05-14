@@ -27,9 +27,9 @@ printf "\n${GOLD}${BOLD}Kayoridolfi AI · Completeness Check${RESET}\n"
 printf "${DIM}Garantia: tudo que foi prometido está entregue${RESET}\n"
 
 # ============================================================
-section "Plugins esperados (9)"
+section "Plugins esperados (10)"
 # ============================================================
-EXPECTED_PLUGINS=(kai-ai-core kai-bootstrap kai-sdd kai-review kai-observability kai-security kai-retro kai-cost kai-evals)
+EXPECTED_PLUGINS=(kai-ai-core kai-bootstrap kai-sdd kai-review kai-observability kai-security kai-retro kai-cost kai-evals kai-intel)
 for p in "${EXPECTED_PLUGINS[@]}"; do
   if [[ -d "plugins/$p" && -f "plugins/$p/.claude-plugin/plugin.json" ]]; then
     t_pass "plugin: $p"
@@ -48,6 +48,7 @@ EXPECTED_CMDS=(
   "kai-ai-core/kai-tutorial" "kai-ai-core/kai-update" "kai-ai-core/kai-banner" "kai-ai-core/kai-ascii"
   "kai-ai-core/kai-achievements" "kai-ai-core/kai-fast" "kai-ai-core/kai-theme" "kai-ai-core/kai-search"
   "kai-ai-core/kai-new-skill" "kai-ai-core/kai-version" "kai-ai-core/kai-list-plugins"
+  "kai-ai-core/kai-telemetry"
   # kai-bootstrap
   "kai-bootstrap/kai-bootstrap" "kai-bootstrap/kai-bootstrap-rescan"
   "kai-bootstrap/kai-enrich-domain" "kai-bootstrap/kai-enrich-runbooks" "kai-bootstrap/kai-enrich-skills"
@@ -74,6 +75,9 @@ EXPECTED_CMDS=(
   "kai-cost/kai-cost" "kai-cost/kai-cost-feature" "kai-cost/kai-cost-budget" "kai-cost/kai-cost-alert"
   # kai-evals
   "kai-evals/kai-evals-init" "kai-evals/kai-evals-run" "kai-evals/kai-evals-compare" "kai-evals/kai-evals-ci"
+  # kai-intel (v2.1)
+  "kai-intel/kai-graph-add" "kai-intel/kai-graph-query" "kai-intel/kai-graph-export"
+  "kai-intel/kai-search" "kai-intel/kai-drift-check"
 )
 for cmd in "${EXPECTED_CMDS[@]}"; do
   PLUGIN="${cmd%%/*}"
@@ -86,7 +90,7 @@ for cmd in "${EXPECTED_CMDS[@]}"; do
 done
 
 # ============================================================
-section "Skills esperadas (14)"
+section "Skills esperadas (15)"
 # ============================================================
 EXPECTED_SKILLS=(
   "kai-ai-core/kai-constitution"
@@ -97,6 +101,7 @@ EXPECTED_SKILLS=(
   "kai-security/kai-threat-modeler" "kai-security/kai-compliance-advisor" "kai-security/kai-crypto-advisor"
   "kai-retro/kai-retro-facilitator" "kai-retro/kai-learning-extractor"
   "kai-evals/kai-evals"
+  "kai-intel/kai-intel"
 )
 for skill in "${EXPECTED_SKILLS[@]}"; do
   PLUGIN="${skill%%/*}"
@@ -135,6 +140,7 @@ EXPECTED_HOOKS=(
   "kai-security/pii-scan.sh"
   "kai-security/private-key-scan.sh"
   "kai-cost/cost-capture.sh"
+  "kai-cost/cost-finalize.sh"
 )
 for hook in "${EXPECTED_HOOKS[@]}"; do
   PLUGIN="${hook%%/*}"
@@ -160,6 +166,7 @@ EXPECTED_SCRIPTS=(
   "kai-ai-core/scripts/search-specs.sh"
   "kai-ai-core/scripts/new-skill.sh"
   "kai-ai-core/scripts/version.sh"
+  "kai-ai-core/scripts/telemetry.sh"
   "kai-ai-core/achievements/checker.sh"
   "kai-ai-core/achievements/notify.sh"
   "kai-ai-core/lib/colors.sh"
@@ -176,6 +183,9 @@ EXPECTED_SCRIPTS=(
   "kai-retro/scripts/newsletter.sh"
   "kai-retro/scripts/adoption-report.sh"
   "kai-sdd/scripts/spec-from-ticket.sh"
+  "kai-intel/scripts/graph.sh"
+  "kai-intel/scripts/search.sh"
+  "kai-intel/scripts/drift-check.sh"
 )
 for script in "${EXPECTED_SCRIPTS[@]}"; do
   if [[ -f "plugins/$script" && -x "plugins/$script" ]]; then

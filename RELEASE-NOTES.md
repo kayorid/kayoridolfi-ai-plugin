@@ -4,17 +4,26 @@ Para o histórico completo de mudanças do Kayoridolfi AI, consulte [`CHANGELOG.
 
 Para o roadmap evolutivo, consulte [`docs/plans/2026-05-10-evolution-roadmap.md`](./docs/plans/2026-05-10-evolution-roadmap.md).
 
-## Última versão: 1.0.0 (2026-05-11)
+## Última versão: 2.1.0 (2026-05-13)
 
-**Marco: maturidade pedagógica.** SDK pronto para uso pelos times.
+**Marco: inteligência operacional.** Knowledge graph cross-squad, busca BM25, drift detection, telemetria opt-in.
 
 Highlights:
-- **Slack bot real** (Bolt JS / Node 20) substitui o stub — comandos `@kai-ai retro <squad>` e `help`
-- **Jira adapter + `/kai-spec-from-ticket`** — bootstrap de spec SDD a partir de ticket
-- **PagerDuty webhook → runbook automático** em `.kai/runbooks/INC-<id>.md`
-- **`/kai-adoption-report`** — relatório corporativo por squad (terminal + JSON)
-- **Certificação AI Champion** — 4 níveis com critérios mensuráveis auto-auditáveis
-- **Testes:** smoke 120 · completeness 166 · E2E 11 · node:test 5/5
+- **Novo plugin `kai-intel`** — `/kai-graph-add|query|export`, `/kai-search` (BM25), `/kai-drift-check`
+- **Telemetria opt-in** — `/kai-telemetry` 100% local, sem rede, padrão desligado
+- **`kai-cost` transcript-based** — novo hook `Stop`/`SessionEnd` (`cost-finalize.sh`) lê transcript JSONL e agrega usage real por modelo. Resolve limitação conhecida da v1.x.
+- **Testes:** completeness 183 · smoke 127 · e2e 9
+
+Sem breaking changes. Comandos v2.0 continuam funcionando.
+
+## Versão anterior: 2.0.0 (2026-05-13)
+
+**Marco: lançamento inicial open-source (MIT).**
+
+Highlights:
+- 9 plugins · 14 skills · 62 comandos · 3 integrações reais (Slack/Jira/PagerDuty)
+- Instalador one-shot `bash scripts/install.sh`
+- Suite: completeness 169 · smoke 124 · e2e 9
 
 Sem breaking changes — todos os comandos v0.5 continuam funcionando.
 

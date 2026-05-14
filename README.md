@@ -17,7 +17,7 @@
 
 *Padroniza processo · Garante auditabilidade · Mantém o time alinhado · Não engessa a stack*
 
-[![Versão](https://img.shields.io/badge/versão-2.0.0-E8550C?style=for-the-badge)]()
+[![Versão](https://img.shields.io/badge/versão-2.1.0-E8550C?style=for-the-badge)]()
 [![Licença](https://img.shields.io/badge/licença-MIT-blue?style=for-the-badge)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-2.x-9333ea?style=for-the-badge)]()
 [![Testes](https://img.shields.io/badge/suítes-5%20verdes-success?style=for-the-badge)]()
@@ -40,7 +40,7 @@ cd ~/dev/kayoridolfi-ai-plugin
 bash scripts/install.sh github
 ```
 
-Habilita os 9 plugins, faz backup do `settings.json`. Reinicie o Claude Code → `/kai-doctor` valida → `/kai-bootstrap` no seu repo → primeira spec com `/kai-spec`.
+Habilita os 10 plugins, faz backup do `settings.json`. Reinicie o Claude Code → `/kai-doctor` valida → `/kai-bootstrap` no seu repo → primeira spec com `/kai-spec`.
 
 ### Opção B — Marketplace local (desenvolvimento / fork)
 
@@ -65,6 +65,7 @@ Depois, **dentro do Claude Code**:
 /plugin install kai-retro@kai
 /plugin install kai-cost@kai
 /plugin install kai-evals@kai
+/plugin install kai-intel@kai
 ```
 
 Valide com `/kai-doctor`.
@@ -128,7 +129,7 @@ Sua equipe usa Claude Code. Cada dev tem seu próprio ritmo, seu próprio jeito 
 
 ---
 
-## 🧩 Os 9 plugins
+## 🧩 Os 10 plugins
 
 <table>
   <tr>
@@ -180,6 +181,11 @@ Sua equipe usa Claude Code. Cada dev tem seu próprio ritmo, seu próprio jeito 
     <td><a href="plugins/kai-evals/"><code>kai-evals</code></a></td>
     <td align="center">🤖 essencial para AI features</td>
     <td>Eval framework — datasets golden, rubricas, runners, A/B compare, integração CI</td>
+  </tr>
+  <tr>
+    <td><a href="plugins/kai-intel/"><code>kai-intel</code></a></td>
+    <td align="center">🧠 v2.1</td>
+    <td>Knowledge graph cross-squad, busca BM25, drift detection spec ↔ código</td>
   </tr>
 </table>
 
@@ -337,11 +343,11 @@ Dez princípios fundadores. Não-negociáveis em features de ativo crítico.
 kayoridolfi-ai-plugin/
 ├── README.md                      ← você está aqui
 ├── CHANGELOG.md  LICENSE  SECURITY.md  CONTRIBUTING.md
-├── .claude-plugin/marketplace.json   ← lista os 9 plugins
+├── .claude-plugin/marketplace.json   ← lista os 10 plugins
 ├── scripts/
 │   ├── install.sh                 ← instalador one-shot
 │   └── pilot-check.sh             ← 11 health checks
-├── plugins/                       ← 9 plugins kai-*
+├── plugins/                       ← 10 plugins kai-*
 │   ├── kai-ai-core/    kai-bootstrap/    kai-sdd/
 │   ├── kai-review/     kai-observability/  kai-security/
 │   └── kai-retro/      kai-cost/          kai-evals/

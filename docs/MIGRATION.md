@@ -4,6 +4,51 @@ Guia de migração entre versões do Kayoridolfi AI. Atualize na ordem recomenda
 
 ---
 
+## v2.0 → v2.1
+
+**Tipo:** minor — sem breaking changes.
+
+### O que muda
+
+- **Plugin novo `kai-intel@2.1.0`** — knowledge graph cross-squad, busca BM25, drift detection. Opt-in.
+- **`/kai-telemetry`** em `kai-ai-core` — telemetria 100% local, opt-in explícito. Padrão desligado.
+- **`kai-cost` hook `Stop`/`SessionEnd` (`cost-finalize.sh`)** — agrega usage real do transcript JSONL. Captura passa a ser robusta (resolve limitação documentada da v1.x). Hook `cost-capture` (PostToolUse) **continua existindo** — agora complementar.
+- Bump versão sincronizado em todos os 10 plugins.
+
+### Como migrar
+
+```bash
+# Atualize o repo
+git pull origin main
+
+# Reinstale plugins (apenas adiciona kai-intel)
+bash scripts/install.sh github
+```
+
+Após `/plugin install kai-intel@kai`, comandos `/kai-graph-add`, `/kai-search`, `/kai-drift-check` ficam disponíveis.
+
+### Telemetria
+
+Padrão: **desligada**. Para habilitar:
+
+```bash
+/kai-telemetry enable
+```
+
+Para desabilitar e apagar:
+
+```bash
+/kai-telemetry disable
+```
+
+### Notas
+
+- Não há mudança em comandos da v2.0.
+- `cost-capture.sh` permanece (preserva captura intra-sessão); `cost-finalize.sh` é aditivo.
+- Sem migrações de schema no `.kai/`.
+
+---
+
 ## v0.2 → v0.3
 
 **Tipo:** minor — sem breaking changes.

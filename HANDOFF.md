@@ -1,10 +1,10 @@
-# Handoff — Kayoridolfi AI v2.0.0
+# Handoff — Kayoridolfi AI v2.1.0
 
 > Documento de retomada. Lê este antes de continuar a evolução do Kayoridolfi AI em sessão futura.
 
 **Data deste handoff:** 2026-05-13
-**Versão atual:** v2.0.0 (tag `v2.0.0` no repo)
-**Estado:** ✅ Lançamento OSS público · Working tree limpo · todas as suites verdes
+**Versão atual:** v2.1.0 (tag `v2.1.0` no repo)
+**Estado:** ✅ Inteligência operacional · Working tree limpo · todas as suites verdes
 
 > 🎯 **Vai testar numa máquina nova (transferindo zip)?** Siga **[PILOT-SETUP.md](./PILOT-SETUP.md)** — passo a passo discoverable pelo Claude Code. Atalho: `bash scripts/pilot-check.sh`.
 
@@ -23,14 +23,19 @@
 - **Path:** `/Users/kayoridolfi/Documents/vibecoding/kayoridolfi-ai-plugin`
 - **Remote origin:** https://github.com/kayorid/kayoridolfi-ai-plugin.git
 
-### Estatísticas (v2.0.0)
-- 9 plugins · 14 skills · 62 comandos `/kai-*` · hooks bloqueantes em `kai-ai-core` e `kai-security`
+### Estatísticas (v2.1.0)
+- 10 plugins · 15 skills · 67 comandos `/kai-*` · 12 hooks
 - **3 integrações reais**: Slack (Bolt JS / Node 20), Jira (adapter shell), PagerDuty (webhook Node)
-- **169 itens** validados pelo completeness-check
-- **124 smoke tests** (execução real de hooks + integrações + comandos)
+- **183 itens** validados pelo completeness-check
+- **127 smoke tests** (execução real de hooks + integrações + comandos)
 - **9 testes E2E** num sandbox temporário (`tests/e2e/run.sh`)
 - **node:test**: 4 slack + 1 pagerduty
 - **Instalador one-shot:** `bash scripts/install.sh` (idempotente, modos `local`/`github`)
+
+### Novidades v2.1
+- **`kai-intel`** — knowledge graph cross-squad, search BM25, drift detection
+- **`/kai-telemetry`** — opt-in 100% local, sem rede (kai-ai-core)
+- **`cost-finalize.sh`** — hook Stop/SessionEnd lê transcript JSONL e agrega usage real por modelo
 
 ---
 
@@ -42,8 +47,8 @@
 cd /Users/kayoridolfi/Documents/vibecoding/kayoridolfi-ai-plugin
 git status
 git log --oneline -5
-bash tests/completeness-check.sh   # esperado: 169 completo · 0 faltando
-bash tests/smoke/run.sh            # esperado: 124 OK · 0 falhas
+bash tests/completeness-check.sh   # esperado: 183 completo · 0 faltando
+bash tests/smoke/run.sh            # esperado: 127 OK · 0 falhas
 bash tests/e2e/run.sh              # esperado: 9 OK · 0 falhas
 ```
 
@@ -66,16 +71,13 @@ bash plugins/kai-ai-core/scripts/version.sh
 
 ## 🚀 Próxima evolução planejada
 
+### ✅ v2.1.0 — entregue em 2026-05-13
+
+Inteligência operacional. Plugin `kai-intel` (knowledge graph + search BM25 + drift detection), telemetria opt-in local, cost-finalize transcript-based.
+
 ### ✅ v2.0.0 — entregue em 2026-05-13
 
-Primeira release pública open-source (MIT). 9 plugins · 3 integrações · instalador one-shot. Resumo completo em [`RELEASE-NOTES.md`](./RELEASE-NOTES.md).
-
-### v2.1 — Inteligência operacional (próximo ciclo)
-
-- `kai-knowledge-graph` — grafo de decisões cross-squad
-- `kai-search` semântico (embeddings + sqlite-vec)
-- Telemetria opt-in
-- Drift detection automático
+Primeira release pública open-source (MIT). 9 plugins · 3 integrações · instalador one-shot.
 
 ### v2.5 — Plataforma corporativa
 
@@ -99,7 +101,7 @@ Primeira release pública open-source (MIT). 9 plugins · 3 integrações · ins
 bash tests/smoke/run.sh
 ```
 
-Esperado: `124 OK · 0 falhas`. Roda em ~13s. Cobre:
+Esperado: `127 OK · 0 falhas`. Roda em ~13s. Cobre:
 - Estrutura repo + manifestos JSON
 - Sincronização de versões
 - Scripts (sintaxe + executáveis)
@@ -116,7 +118,7 @@ Esperado: `124 OK · 0 falhas`. Roda em ~13s. Cobre:
 bash tests/completeness-check.sh
 ```
 
-Esperado: `169 completo · 0 faltando`. Loop iterativo — repita até zerar.
+Esperado: `183 completo · 0 faltando`. Loop iterativo — repita até zerar.
 
 ### E2E
 
@@ -215,8 +217,9 @@ kayoridolfi-ai-plugin/
 │   ├── kai-observability/              ← logs/metrics/traces/SLOs
 │   ├── kai-security/                   ← threat model + cripto + compliance
 │   ├── kai-retro/                      ← retrospectivas + memória
-│   ├── kai-cost/                       ← captura de tokens
-│   └── kai-evals/                      ← framework de eval para AI features
+│   ├── kai-cost/                       ← captura de tokens (PostToolUse + Stop transcript)
+│   ├── kai-evals/                      ← framework de eval para AI features
+│   └── kai-intel/                      ← v2.1: knowledge graph, search BM25, drift detection
 ├── docs/
 │   ├── plans/                         ← propostas + roadmaps
 │   ├── specs/_completed/              ← specs entregues (v0.3.2, v0.5, v1.0)
@@ -235,9 +238,9 @@ kayoridolfi-ai-plugin/
 │   ├── install.sh                     ← instalador one-shot
 │   └── pilot-check.sh                 ← saúde do piloto
 ├── tests/
-│   ├── smoke/run.sh                   ← execução real (124 checks)
+│   ├── smoke/run.sh                   ← execução real (127 checks)
 │   ├── e2e/run.sh                     ← ciclo completo (9 checks)
-│   └── completeness-check.sh          ← validação canônica (169 itens)
+│   └── completeness-check.sh          ← validação canônica (183 itens)
 └── .github/
     ├── workflows/
     │   ├── kai-ai-checks.yml           ← distribuído para squads
