@@ -111,7 +111,7 @@ done
 # ============================================================
 section "ASCII art (8)"
 # ============================================================
-EXPECTED_ASCII=(welcome bootstrap-done spec-start ship hotfix retro mature-squad hexagon-logo)
+EXPECTED_ASCII=(welcome bootstrap-done spec-start ship hotfix retro mature-squad kai-wordmark)
 for art in "${EXPECTED_ASCII[@]}"; do
   if [[ -f "plugins/kai-ai-core/assets/ascii/${art}.txt" ]]; then
     t_pass "ascii: ${art}.txt"
@@ -275,6 +275,6 @@ if [[ $FAIL -gt 0 ]]; then
   printf "${RED}${BOLD}INCOMPLETO. Resolva os ✗ antes de release.${RESET}\n\n"
   exit 1
 else
-  printf "${GREEN}${BOLD}TUDO ENTREGUE. ⬡${RESET}\n\n"
+  printf "${GREEN}${BOLD}TUDO ENTREGUE.${RESET}\n\n"
   exit 0
 fi

@@ -103,4 +103,4 @@ Apresente visão geral concisa do Kayoridolfi AI.
 - **Issues:** [github.com/kayorid/kayoridolfi-ai-plugin/issues](https://github.com/kayorid/kayoridolfi-ai-plugin/issues)
 - **Vulnerabilidade:** ver [`SECURITY.md`](https://github.com/kayorid/kayoridolfi-ai-plugin/blob/main/SECURITY.md)
 
-Mantenha resposta concisa em uma tela. ⬡
+Mantenha resposta concisa em uma tela.

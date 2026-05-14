@@ -75,7 +75,7 @@ case "$MODE" in
     printf "       ${C_BOLD}/kai-doctor${C_RESET}\n\n"
     hint "Alternativa: usar marketplace publicado no GitHub (sem clonar):"
     printf "       ${C_BOLD}bash scripts/install.sh github${C_RESET}\n\n"
-    printf "${C_OK}${C_BOLD}Pronto para registrar. ⬡${C_RESET}\n\n"
+    printf "${C_OK}${C_BOLD}Pronto para registrar.${C_RESET}\n\n"
     ;;
   github)
     if [[ -f "$SETTINGS" ]]; then
@@ -119,7 +119,7 @@ case "$MODE" in
     hint "2. /kai-doctor para validar."
     hint "3. /kai-bootstrap no repo do seu squad."
     hint "4. Primeira spec: /kai-spec."
-    printf "\n${C_OK}${C_BOLD}✨ Instalado via GitHub. ⬡${C_RESET}\n\n"
+    printf "\n${C_OK}${C_BOLD}✨ Instalado via GitHub.${C_RESET}\n\n"
     ;;
   *)
     err "modo desconhecido: $MODE (use 'local' ou 'github')"

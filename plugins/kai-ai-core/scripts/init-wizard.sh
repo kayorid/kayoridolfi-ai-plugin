@@ -76,4 +76,4 @@ printf "  ${S}▸${R} Reinicie o Claude Code\n"
 printf "  ${S}▸${R} Rode ${B}/kai-doctor${R} para validar instalação\n"
 printf "  ${S}▸${R} No primeiro repo do squad: ${B}/kai-bootstrap${R}\n\n"
 
-printf "${S}${B}✨ Tudo pronto. Bem-vindo ao Kayoridolfi AI. ⬡${R}\n\n"
+printf "${S}${B}✨ Tudo pronto. Bem-vindo ao Kayoridolfi AI.${R}\n\n"

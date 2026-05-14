@@ -298,4 +298,4 @@ Pronto para continuar a evolução. Veja roadmap em [`docs/plans/2026-05-10-evol
 **Mantido por:** maintainers · Kayoridolfi
 **Última atualização:** 2026-05-13
 **Próxima revisão sugerida:** após primeiro ciclo de feedback OSS ou ao iniciar v2.1
-**⬡**
+****

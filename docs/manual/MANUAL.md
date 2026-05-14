@@ -809,7 +809,7 @@ Captura uso de tokens via hook `PostToolUse` com curto-circuito antes de jq se p
 ### 12.3 Identidade visual Kayoridolfi AI (v0.2.0)
 
 - Paleta laranja  oficial `#E8550C` em truecolor (`\033[38;2;232;85;12m`).
-- 8 ASCII arts hexagonais (welcome, bootstrap-done, spec-start, ship, hotfix, retro, mature-squad, hexagon-logo) com FIGlet ANSI Shadow para "Kayoridolfi AI".
+- 8 ASCII arts (welcome, bootstrap-done, spec-start, ship, hotfix, retro, mature-squad, kai-wordmark) com FIGlet ANSI Shadow para "Kayoridolfi AI".
 - 4 temas configuráveis via `.kai/config.yaml` ou `KAI_THEME`: `default`, `festive`, `compact`, `accessible`, `none`.
 - Statusline auto-detect de largura (M-2): formato completo se ≥100 cols, compacto 80-100, mínimo <80.
 - SessionStart hook envia banner colorido ao stderr (terminal) e versão plain ao `additionalContext` (LLM input — economia ~150 tokens/sessão, M-8).
@@ -874,4 +874,4 @@ CI próprio (`.github/workflows/sdk-ci.yml`) roda em todo PR ao `kayoridolfi-ai-
 
 **Fim do manual. Para dúvidas, abra issue ou contate maintainers.**
 
-**Versão:** 0.3.1 · **Última atualização:** 2026-05-10 · **Mantido por:** maintainers · Kayoridolfi · ⬡
+**Versão:** 0.3.1 · **Última atualização:** 2026-05-10 · **Mantido por:** maintainers · Kayoridolfi

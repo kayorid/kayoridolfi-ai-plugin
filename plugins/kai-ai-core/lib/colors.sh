@@ -85,8 +85,8 @@ kai_load_glyphs() {
       G_WARN="[!]"
       G_FAIL="[X]"
       G_BULLET="*"
-      G_DIAMOND="<KAI>"
-      G_HEXAGON="<>"
+      G_DIAMOND=""
+      G_HEXAGON=""
       G_SHIELD="(s)"
       ;;
     *)
@@ -94,8 +94,8 @@ kai_load_glyphs() {
       G_WARN="⚠"
       G_FAIL="✗"
       G_BULLET="•"
-      G_DIAMOND="⬡"
-      G_HEXAGON="⬡"
+      G_DIAMOND=""
+      G_HEXAGON=""
       G_SHIELD="🛡"
       ;;
   esac
@@ -103,7 +103,7 @@ kai_load_glyphs() {
 }
 
 # Helpers de impressão
-kai_say()    { kai_load_palette; kai_load_glyphs; echo -e "${C_PRIMARY}${G_HEXAGON} Kayoridolfi AI${C_RESET} ${C_DIM}·${C_RESET} $*"; }
+kai_say()    { kai_load_palette; kai_load_glyphs; echo -e "${C_PRIMARY}Kayoridolfi AI${C_RESET} ${C_DIM}·${C_RESET} $*"; }
 kai_ok()     { kai_load_palette; kai_load_glyphs; echo -e "${C_SUCCESS}${G_OK}${C_RESET} $*"; }
 kai_warn()   { kai_load_palette; kai_load_glyphs; echo -e "${C_WARN}${G_WARN}${C_RESET} $*"; }
 kai_fail()   { kai_load_palette; kai_load_glyphs; echo -e "${C_DANGER}${G_FAIL}${C_RESET} $*"; }

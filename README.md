@@ -411,6 +411,6 @@ Para reportar vulnerabilidade ver [SECURITY.md](SECURITY.md) — não abra issue
 
 **Open source · Sem amarras · Para qualquer time · Para qualquer stack**
 
-⬡
+
 
 </div>

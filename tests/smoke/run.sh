@@ -364,7 +364,7 @@ fi
 section "ASCII art"
 # ============================================================
 
-for art in welcome bootstrap-done spec-start ship hotfix retro mature-squad hexagon-logo; do
+for art in welcome bootstrap-done spec-start ship hotfix retro mature-squad kai-wordmark; do
   if [[ -f "plugins/kai-ai-core/assets/ascii/${art}.txt" ]]; then
     t_pass "ascii: ${art}.txt"
   else
@@ -578,6 +578,6 @@ elif [[ $WARN -gt 0 ]]; then
   printf "${YELLOW}${BOLD}SUITE PASSOU COM AVISOS.${RESET} Revise os ⚠.\n\n"
   exit 0
 else
-  printf "${GREEN}${BOLD}SUITE PASSOU. Tudo perfeito. ⬡${RESET}\n\n"
+  printf "${GREEN}${BOLD}SUITE PASSOU. Tudo perfeito.${RESET}\n\n"
   exit 0
 fi

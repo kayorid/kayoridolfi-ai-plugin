@@ -88,7 +88,7 @@ if [[ $FAIL -gt 0 ]]; then
 fi
 
 cat <<EOF
-${GREEN}${BOLD}PILOTO PRONTO. ⬡${RESET}
+${GREEN}${BOLD}PILOTO PRONTO.${RESET}
 
 Próximos passos (em ${BOLD}PILOT-SETUP.md${RESET}):
   ${ORANGE}▸${RESET} Fase 3 — Registrar marketplace local no Claude Code

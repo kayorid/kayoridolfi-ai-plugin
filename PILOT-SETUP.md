@@ -53,7 +53,7 @@ find . -name "*.js" -path "*/integrations/*" 2>/dev/null  # só listar, não chm
 Rode as 4 suites de teste — **todas devem passar verde** antes de continuar:
 
 ```bash
-bash plugins/kai-ai-core/scripts/version.sh        # → "Tudo sincronizado. ⬡"
+bash plugins/kai-ai-core/scripts/version.sh        # → "Tudo sincronizado."
 bash tests/completeness-check.sh                  # → 166 completo · 0 faltando
 bash tests/smoke/run.sh                           # → 120 OK · 0 falhas
 bash tests/e2e/run.sh                             # → 11 OK · 0 falhas

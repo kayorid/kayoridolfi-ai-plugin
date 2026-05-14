@@ -54,7 +54,7 @@ Guia de migração entre versões do Kayoridolfi AI. Atualize na ordem recomenda
 
 ### O que muda
 
-- **Identidade visual Kayoridolfi AI** — paleta laranja  oficial, ASCII hexagonal, statusline custom, banner SessionStart.
+- **Identidade visual Kayoridolfi AI** — paleta laranja oficial, ASCII wordmark, statusline custom, banner SessionStart.
 - **Plugin novo `kai-cost@0.2.0`** — captura de tokens.
 - **Comandos novos no core:** `/kai-doctor`, `/kai-snapshot`, `/kai-dashboard`, `/kai-tutorial`, `/kai-update`, `/kai-banner`, `/kai-ascii`, `/kai-achievements`.
 - **Achievement system** — 12 conquistas com notify hook em Stop.

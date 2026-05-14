@@ -188,5 +188,5 @@ if [[ $FAIL -gt 0 ]]; then
   printf "${RED}${BOLD}E2E FALHOU.${RESET}\n"
   exit 1
 fi
-printf "${GREEN}${BOLD}E2E PASSOU. Ciclo completo verde. ⬡${RESET}\n"
+printf "${GREEN}${BOLD}E2E PASSOU. Ciclo completo verde.${RESET}\n"
 exit 0

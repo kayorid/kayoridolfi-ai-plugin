@@ -73,4 +73,4 @@ if [[ $ANY_MISMATCH -eq 1 ]]; then
   exit 1
 fi
 
-printf "\n${S}Tudo sincronizado.${R} ⬡\n\n"
+printf "\n${S}Tudo sincronizado.${R}\n\n"
