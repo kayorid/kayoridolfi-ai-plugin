@@ -1,10 +1,10 @@
-# Handoff — Kayoridolfi AI v1.0.0
+# Handoff — Kayoridolfi AI v2.0.0
 
 > Documento de retomada. Lê este antes de continuar a evolução do Kayoridolfi AI em sessão futura.
 
-**Data deste handoff:** 2026-05-11
-**Versão atual:** v1.0.0 (tag `v1.0.0` no repo)
-**Estado:** ✅ Production-ready corporativo · Working tree limpo · todas as suites verdes
+**Data deste handoff:** 2026-05-13
+**Versão atual:** v2.0.0 (tag `v2.0.0` no repo)
+**Estado:** ✅ Lançamento OSS público · Working tree limpo · todas as suites verdes
 
 > 🎯 **Vai testar numa máquina nova (transferindo zip)?** Siga **[PILOT-SETUP.md](./PILOT-SETUP.md)** — passo a passo discoverable pelo Claude Code. Atalho: `bash scripts/pilot-check.sh`.
 
@@ -15,27 +15,22 @@
 ### Repositório
 - **GitHub:** https://github.com/kayorid/kayoridolfi-ai-plugin
 - **Branch principal:** `main`
-- **Último commit:** `89ab17e` — feat: Kayoridolfi AI v1.0.0 — maturidade pedagógica
-- **Tags:** `v0.3.0`, `v0.3.1`, `v0.3.2`, `v0.5.0`, `v1.0.0`
-- **Releases:** todas publicadas com release notes em CHANGELOG.md
+- **Último commit:** `9731735` — Initial release — Kayoridolfi AI Plugin v2.0.0
+- **Tag corrente:** `v2.0.0`
+- **Release:** publicada com notas em [`RELEASE-NOTES.md`](./RELEASE-NOTES.md) / [`CHANGELOG.md`](./CHANGELOG.md)
 
 ### Local
 - **Path:** `/Users/kayoridolfi/Documents/vibecoding/kayoridolfi-ai-plugin`
 - **Remote origin:** https://github.com/kayorid/kayoridolfi-ai-plugin.git
 
-### Estatísticas (v1.0.0)
-- 9 plugins · 14+ skills · 60+ comandos · 10 hooks · 33 scripts · 16 achievements · 18+ docs
-- **3 integrações reais**: Slack (Bolt JS), Jira (adapter shell), PagerDuty (webhook Node)
-- **166 itens** validados pelo completeness-check
-- **120 smoke tests** (execução real de hooks + integrações + comandos novos)
-- **11 testes E2E** num sandbox temporário (`tests/e2e/run.sh`)
-- **5 testes node:test** (4 slack + 1 pagerduty)
-
-### Specs entregues
-Todas em `docs/specs/_completed/`:
-- `v0.3.2-cleanup/` — M-1 (consolidação de hooks) + suite E2E
-- `v0.5-community/` — leaderboard, newsletter, AI Champions charter, AI Lab playbook
-- `v1.0-maturity/` — Slack bot, Jira adapter, PagerDuty webhook, adoption report, certificação
+### Estatísticas (v2.0.0)
+- 9 plugins · 14 skills · 62 comandos `/kai-*` · hooks bloqueantes em `kai-ai-core` e `kai-security`
+- **3 integrações reais**: Slack (Bolt JS / Node 20), Jira (adapter shell), PagerDuty (webhook Node)
+- **169 itens** validados pelo completeness-check
+- **124 smoke tests** (execução real de hooks + integrações + comandos)
+- **9 testes E2E** num sandbox temporário (`tests/e2e/run.sh`)
+- **node:test**: 4 slack + 1 pagerduty
+- **Instalador one-shot:** `bash scripts/install.sh` (idempotente, modos `local`/`github`)
 
 ---
 
@@ -47,11 +42,12 @@ Todas em `docs/specs/_completed/`:
 cd /Users/kayoridolfi/Documents/vibecoding/kayoridolfi-ai-plugin
 git status
 git log --oneline -5
-bash tests/completeness-check.sh
-bash tests/smoke/run.sh
+bash tests/completeness-check.sh   # esperado: 169 completo · 0 faltando
+bash tests/smoke/run.sh            # esperado: 124 OK · 0 falhas
+bash tests/e2e/run.sh              # esperado: 9 OK · 0 falhas
 ```
 
-Esperado: working tree limpo, ambas suites verde.
+Esperado: working tree limpo, todas as suites verde.
 
 ### 2. Sincronizar com remote
 
@@ -70,31 +66,28 @@ bash plugins/kai-ai-core/scripts/version.sh
 
 ## 🚀 Próxima evolução planejada
 
-### ✅ v0.3.2, v0.5.0, v1.0.0 — entregues em 2026-05-11
+### ✅ v2.0.0 — entregue em 2026-05-13
 
-Specs completas em `docs/specs/_completed/`. Resumo:
-- **v0.3.2** — M-1 consolidação de hooks + suite E2E + fix achievements unbound var
-- **v0.5.0** — `/kai-leaderboard`, `/kai-newsletter`, charter AI Champions, AI Lab (6 trilhas), opt-in guide
-- **v1.0.0** — Slack bot Bolt JS, Jira adapter, PagerDuty webhook, `/kai-adoption-report`, certificação Champion 4 níveis
+Primeira release pública open-source (MIT). 9 plugins · 3 integrações · instalador one-shot. Resumo completo em [`RELEASE-NOTES.md`](./RELEASE-NOTES.md).
 
-### v1.5 — Inteligência operacional (próximo ciclo)
+### v2.1 — Inteligência operacional (próximo ciclo)
 
 - `kai-knowledge-graph` — grafo de decisões cross-squad
 - `kai-search` semântico (embeddings + sqlite-vec)
 - Telemetria opt-in
 - Drift detection automático
 
-### v2.0 — Plataforma corporativa (Trim 2)
+### v2.5 — Plataforma corporativa
 
 - SIEM integration
-- Hackathon interno anual "Kayoridolfi AI Hack"
 - Datadog/Grafana → observability review automatizado
 - Marketplace interno com infra própria
+- Hackathon anual "Kayoridolfi AI Hack"
 
 ### v3.0 — Excelência de mercado (Q4 2026)
 
 - IDE extension (VS Code / JetBrains)
-- Open-source seletivo de componentes não-confidenciais
+- Open-source seletivo de componentes adicionais
 
 ---
 
@@ -106,7 +99,7 @@ Specs completas em `docs/specs/_completed/`. Resumo:
 bash tests/smoke/run.sh
 ```
 
-Esperado: `90 OK · 0 falhas`. Roda em ~3s. Cobre:
+Esperado: `124 OK · 0 falhas`. Roda em ~13s. Cobre:
 - Estrutura repo + manifestos JSON
 - Sincronização de versões
 - Scripts (sintaxe + executáveis)
@@ -115,6 +108,7 @@ Esperado: `90 OK · 0 falhas`. Roda em ~3s. Cobre:
 - ASCII art + documentação completa
 - cost-report execução
 - cost-capture overhead
+- Integrações Slack/Jira/PagerDuty (incluindo node:test)
 
 ### Completeness check
 
@@ -122,7 +116,15 @@ Esperado: `90 OK · 0 falhas`. Roda em ~3s. Cobre:
 bash tests/completeness-check.sh
 ```
 
-Esperado: `154 completo · 0 faltando`. Loop iterativo — repita até zerar.
+Esperado: `169 completo · 0 faltando`. Loop iterativo — repita até zerar.
+
+### E2E
+
+```bash
+bash tests/e2e/run.sh
+```
+
+Esperado: `9 OK · 0 falhas`. Ciclo completo (init → spec → review → retro) num sandbox temporário.
 
 ### CI no GitHub
 
@@ -189,9 +191,7 @@ Checklist:
 
 ## 🔒 Vulnerabilidade?
 
-**Não abra issue público.** Veja [`SECURITY.md`](SECURITY.md):
-- Email: `security@example.com`
-- GitHub Security Advisory: https://github.com/kayorid/kayoridolfi-ai-plugin/security/advisories/new
+**Não abra issue público.** Veja [`SECURITY.md`](SECURITY.md). Canal preferencial: GitHub Security Advisory em https://github.com/kayorid/kayoridolfi-ai-plugin/security/advisories/new.
 
 ---
 
@@ -202,9 +202,10 @@ kayoridolfi-ai-plugin/
 ├── README.md                          ← entrada principal
 ├── HANDOFF.md                         ← você está aqui
 ├── CHANGELOG.md                       ← histórico de versões
+├── RELEASE-NOTES.md                   ← release notes resumidos
 ├── CONTRIBUTING.md                    ← como contribuir
 ├── SECURITY.md                        ← reportar vulnerabilidade
-├── REVIEW.md                          ← code review pré-release v0.2
+├── PILOT-SETUP.md                     ← onboarding piloto
 ├── .claude-plugin/marketplace.json    ← lista 9 plugins
 ├── plugins/
 │   ├── kai-ai-core/                    ← obrigatório, contém wizard, doctor, dashboard
@@ -218,6 +219,7 @@ kayoridolfi-ai-plugin/
 │   └── kai-evals/                      ← framework de eval para AI features
 ├── docs/
 │   ├── plans/                         ← propostas + roadmaps
+│   ├── specs/_completed/              ← specs entregues (v0.3.2, v0.5, v1.0)
 │   ├── manual/MANUAL.md               ← bases teóricas + internals
 │   ├── presentation/PRESENTATION.md   ← roteiro slide-a-slide
 │   ├── governance/raci.md             ← papéis + processos
@@ -225,11 +227,17 @@ kayoridolfi-ai-plugin/
 │   ├── MIGRATION.md                   ← entre versões
 │   ├── PLUGIN-DEVELOPMENT.md          ← criar plugins
 │   └── faq.md
-├── integrations/slack/                ← bot stub para v1.0
+├── integrations/
+│   ├── slack/                         ← bot Bolt JS Node 20
+│   ├── jira/                          ← adapter shell
+│   └── pagerduty/                     ← webhook Node
+├── scripts/
+│   ├── install.sh                     ← instalador one-shot
+│   └── pilot-check.sh                 ← saúde do piloto
 ├── tests/
-│   ├── smoke/run.sh                   ← suite de execução real (90 verificações)
-│   ├── smoke/README.md
-│   └── completeness-check.sh          ← validação canônica (154 itens)
+│   ├── smoke/run.sh                   ← execução real (124 checks)
+│   ├── e2e/run.sh                     ← ciclo completo (9 checks)
+│   └── completeness-check.sh          ← validação canônica (169 itens)
 └── .github/
     ├── workflows/
     │   ├── kai-ai-checks.yml           ← distribuído para squads
@@ -244,7 +252,7 @@ kayoridolfi-ai-plugin/
 
 Para evitar reabrir discussões em sessões futuras, registro aqui:
 
-1. **Marketplace path:** `kayorid/kayoridolfi-ai-plugin` (público). Em produção  seria espelhado em `kayorid/kayoridolfi-ai-plugin` no GitHub Enterprise.
+1. **Marketplace path:** `kayorid/kayoridolfi-ai-plugin` (público OSS, MIT).
 
 2. **Stack-agnostic por design:** SDK não opina sobre linguagem ou framework. Cada squad gera seu contexto via `/kai-bootstrap`.
 
@@ -260,13 +268,13 @@ Para evitar reabrir discussões em sessões futuras, registro aqui:
 
 6. **Idioma:** português brasileiro nos artefatos. Termos técnicos em inglês quando estabelecidos.
 
-7. **kai-cost limitação conhecida:** Claude Code raramente coloca `usage` em payloads de tool individuais. Captura real é parcial — em v1.0+ moveremos para hook `Stop`/`SessionEnd` lendo transcript.
+7. **kai-cost limitação conhecida:** Claude Code raramente coloca `usage` em payloads de tool individuais. Captura real é parcial — roadmap v2.1 prevê mover para hook `Stop`/`SessionEnd` lendo transcript.
 
-8. **Slack integration:** ainda é stub (manifest.yaml). Implementação real em v1.0.
+8. **GitHub Pages:** não configurado. Documentação fica no repo.
 
-9. **GitHub Pages:** não configurado. Documentação fica no repo.
+9. **Testes em CI:** rodam ShellCheck com `severity: error` (não warning). Não falham por estilo, apenas por bugs reais.
 
-10. **Testes em CI:** rodam ShellCheck com `severity: error` (não warning). Não falham por estilo, apenas por bugs reais.
+10. **Licença:** MIT.
 
 ---
 
@@ -278,15 +286,16 @@ Antes de continuar trabalho:
 - [ ] `git pull origin main` — sincronizar
 - [ ] `bash tests/smoke/run.sh` — passa
 - [ ] `bash tests/completeness-check.sh` — passa
+- [ ] `bash tests/e2e/run.sh` — passa
 - [ ] Ler último commit: `git log -1`
 - [ ] Verificar issues abertas: `gh issue list -R kayorid/kayoridolfi-ai-plugin`
 - [ ] Verificar PRs: `gh pr list -R kayorid/kayoridolfi-ai-plugin`
 
-Pronto para continuar a evolução. Veja roadmap em [`docs/plans/2026-05-10-evolution-roadmap.md`](docs/plans/2026-05-10-evolution-roadmap.md) e priorize ondas com base em feedback dos squads piloto.
+Pronto para continuar a evolução. Veja roadmap em [`docs/plans/2026-05-10-evolution-roadmap.md`](docs/plans/2026-05-10-evolution-roadmap.md).
 
 ---
 
 **Mantido por:** maintainers · Kayoridolfi
-**Última atualização:** 2026-05-10
-**Próxima revisão sugerida:** após 1 semana de piloto ou ao iniciar v0.5
+**Última atualização:** 2026-05-13
+**Próxima revisão sugerida:** após primeiro ciclo de feedback OSS ou ao iniciar v2.1
 **⬡**

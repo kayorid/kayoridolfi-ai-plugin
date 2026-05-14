@@ -8,8 +8,8 @@ O Kayoridolfi AI lida com hooks bloqueantes em ambiente de desenvolvimento de um
 
 **Não abra issue público.** Use um destes canais:
 
-1. **Email:** `security@example.com` (cópia: `kayocdi@gmail.com`)
-2. **GitHub Security Advisory:** [github.com/kayorid/kayoridolfi-ai-plugin/security/advisories/new](https://github.com/kayorid/kayoridolfi-ai-plugin/security/advisories/new)
+1. **GitHub Security Advisory (preferencial):** [github.com/kayorid/kayoridolfi-ai-plugin/security/advisories/new](https://github.com/kayorid/kayoridolfi-ai-plugin/security/advisories/new)
+2. **Email:** `kayocdi@gmail.com` (assunto começando com `[security]`)
 
 ### O que incluir
 
@@ -55,13 +55,13 @@ O Kayoridolfi AI lida com hooks bloqueantes em ambiente de desenvolvimento de um
 
 ## Versões suportadas
 
-Apenas versão `0.x` mais recente recebe patches de segurança.
+Apenas versão major mais recente recebe patches de segurança.
 
 | Versão | Suporte |
 |--------|:-------:|
-| 0.3.x  | ✓ ativa |
-| 0.2.x  | ✗ — atualize |
-| 0.1.x  | ✗ — atualize |
+| 2.x    | ✓ ativa |
+| 1.x    | ✗ — atualize |
+| 0.x    | ✗ — atualize |
 
 ## Hardening recomendado para usuários
 
