@@ -419,7 +419,7 @@ plugins/kai-ai-core/achievements/
   - Spec coverage check (se PR referencia spec, valida que `verification.md` existe e PASSes).
   - Validation de mensagens de commit (formato `[spec:...]`).
 - Falhas viram comentários no PR com orientação.
-- Squads instalam adicionando `uses: kayorid/kai-ai-sdk/.github/workflows/kai-ai-checks.yml@v1.0`.
+- Squads instalam adicionando `uses: kayorid/kayoridolfi-ai-plugin/.github/workflows/kai-ai-checks.yml@v1.0`.
 
 **Esforço:** 5 dias.
 
@@ -597,7 +597,7 @@ plugins/kai-ai-core/achievements/
   - `.kai/CLAUDE.md` presente.
   - Conformidade da constitution local.
   - Disponibilidade de MCPs aprovados.
-  - Conectividade com GitHub Enterprise para updates.
+  - Conectividade com GitHub para updates.
 - Saída colorida, com `✓`/`⚠`/`✗`, sugestão de fix em cada problema.
 
 **Esforço:** 4 dias.

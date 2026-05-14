@@ -294,7 +294,7 @@ Se todos os checks ✅: **piloto pronto para uso real.** Próximos passos abaixo
    - Slack: tokens em `integrations/slack/README.md`
    - Jira: env vars em `integrations/jira/README.md`
    - PagerDuty: webhook secret em `integrations/pagerduty/README.md`
-4. **Publicar no GitHub Enterprise** — `git remote add enterprise <url>` e ajustar marketplace path
+4. **Publicar no GitHub** — `git remote add enterprise <url>` e ajustar marketplace path
 5. **Formalizar comunidade AI Champions** — `docs/governance/ai-champions.md`
 6. **Após primeiro trimestre:** `/kai-newsletter` → distribuir para Tech Leads
 

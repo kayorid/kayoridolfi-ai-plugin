@@ -111,7 +111,7 @@ A memória é **versionada em git**, não em sistema externo opaco. Vantagens: a
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │ CAMADA 0 — Distribuição                                          │
-│ GitHub Enterprise → repo kayoridolfi-ai-plugin → marketplace via JSON     │
+│ GitHub → repo kayoridolfi-ai-plugin → marketplace via JSON     │
 └─────────────────────────────────────────────────────────────────┘
                            ▼
 ┌─────────────────────────────────────────────────────────────────┐

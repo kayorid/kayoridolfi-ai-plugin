@@ -74,7 +74,7 @@ Estes princípios são **não-negociáveis** e governam todas as decisões de de
 ```
 ┌────────────────────────────────────────────────────────────────────┐
 │  CAMADA 0 — Distribuição                                            │
-│  GitHub Enterprise → marketplace interno (kai-marketplace)        │
+│  GitHub → marketplace interno (kai-marketplace)        │
 └────────────────────────────────────────────────────────────────────┘
                                    ▼
 ┌────────────────────────────────────────────────────────────────────┐
@@ -116,7 +116,7 @@ Estes princípios são **não-negociáveis** e governam todas as decisões de de
 
 ### 4.2 Repositório do SDK
 
-O SDK vive em **um único repositório** (`kayorid/kai-ai-sdk`) com estrutura multi-plugin:
+O SDK vive em **um único repositório** (`kayorid/kayoridolfi-ai-plugin`) com estrutura multi-plugin:
 
 ```
 kayoridolfi-ai-plugin/
@@ -172,7 +172,7 @@ A v1.0 usa o próprio repositório GitHub como marketplace. Squads adicionam ao 
     "kai": {
       "source": {
         "source": "github",
-        "repo": "kayorid/kai-ai-sdk"
+        "repo": "kayorid/kayoridolfi-ai-plugin"
       }
     }
   },

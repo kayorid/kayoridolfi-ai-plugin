@@ -1,6 +1,6 @@
 # Kayoridolfi AI — checks de PR distribuídos
 # Squads  incluem este workflow no seu repo via:
-#   uses: kayorid/kai-ai-sdk/.github/workflows/kai-ai-checks.yml@main
+#   uses: kayorid/kayoridolfi-ai-plugin/.github/workflows/kai-ai-checks.yml@main
 
 name: Kayoridolfi AI · AI Checks
 

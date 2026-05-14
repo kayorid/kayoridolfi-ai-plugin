@@ -204,6 +204,7 @@ EXPECTED_DOCS=(
   "RELEASE-NOTES.md"
   "CONTRIBUTING.md"
   "SECURITY.md"
+  "CODE_OF_CONDUCT.md"
   "PILOT-SETUP.md"
   "HANDOFF.md"
   "docs/specs/_completed/v0.2-pre-release-review/REVIEW.md"

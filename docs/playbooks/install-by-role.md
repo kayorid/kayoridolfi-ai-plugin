@@ -8,7 +8,7 @@ Como instalar e configurar o Kayoridolfi AI Plugin conforme seu papel.
 
 ### O que você precisa fazer uma vez
 
-1. **Manter o repositório `kayorid/kayoridolfi-ai-plugin`** no GitHub Enterprise (espelho do `kayorid/kayoridolfi-ai-plugin` para devs externos).
+1. **Manter o repositório `kayorid/kayoridolfi-ai-plugin`** no GitHub (espelho do `kayorid/kayoridolfi-ai-plugin` para devs externos).
 2. **Validar instalação local** completa via wizard automático:
    ```
    /kai-init
@@ -40,7 +40,7 @@ Como instalar e configurar o Kayoridolfi AI Plugin conforme seu papel.
    }
    ```
 3. **Validar** com `/kai-doctor` em qualquer repositório de teste.
-4. **Configurar permissões** no GitHub Enterprise para PRs ao SDK (label `proposal` requer review dos maintainers).
+4. **Configurar permissões** no GitHub para PRs ao SDK (label `proposal` requer review dos maintainers).
 
 ### Suas responsabilidades operacionais
 
@@ -106,7 +106,7 @@ Como instalar e configurar o Kayoridolfi AI Plugin conforme seu papel.
 ### Setup técnico
 
 Mesmo do Tech Lead. Adicionalmente:
-- Tenha acesso ao repositório `kayorid/kai-ai-sdk` para abrir PRs com propostas.
+- Tenha acesso ao repositório `kayorid/kayoridolfi-ai-plugin` para abrir PRs com propostas.
 - Configure notificações Slack para canal `#kai-ai-plugin`.
 
 ### Programa de treinamento

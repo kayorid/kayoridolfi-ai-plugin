@@ -6,9 +6,9 @@
     "name": "Kayoridolfi",
     "email": "kayocdi@gmail.com"
   },
-  "homepage": "https://github.com/kayorid/kai-ai-sdk",
-  "repository": "https://github.com/kayorid/kai-ai-sdk",
-  "license": "Proprietary",
+  "homepage": "https://github.com/kayorid/kayoridolfi-ai-plugin",
+  "repository": "https://github.com/kayorid/kayoridolfi-ai-plugin",
+  "license": "MIT",
   "keywords": [
     "kai",
     "cost",

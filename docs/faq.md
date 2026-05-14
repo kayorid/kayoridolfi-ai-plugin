@@ -73,7 +73,7 @@ R: Para o squad: implemente como skill custom em `.kai/skills/`. Para o  todo: `
 R: Veja `.kai/learnings/quarterly-*.md` se publicados, e participe da comunidade mensal de AI Champions.
 
 **P: Como reportar bug no SDK?**
-R: Issue no repo `kayorid/kai-ai-sdk` com label `bug`. P1 (bloqueia trabalho) → também avise no Slack.
+R: Issue no repo `kayorid/kayoridolfi-ai-plugin` com label `bug`. P1 (bloqueia trabalho) → também avise no Slack.
 
 ## Suporte
 

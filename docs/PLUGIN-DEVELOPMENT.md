@@ -63,7 +63,7 @@ plugins/<plugin-name>/
   },
   "homepage": "https://github.com/kayorid/kayoridolfi-ai-plugin",
   "repository": "https://github.com/kayorid/kayoridolfi-ai-plugin",
-  "license": "Proprietary",
+  "license": "MIT",
   "keywords": ["kai", "<categoria>"]
 }
 ```

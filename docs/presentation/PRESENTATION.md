@@ -113,7 +113,7 @@ Cada slide tem: **Conteúdo visual sugerido** + **Falas-chave** + **Tempo** + **
 **Falas-chave:**
 > "A arquitetura tem 4 camadas:"
 >
-> "**Distribuição:** repositório `kayoridolfi-ai-plugin` no GitHub Enterprise, exposto como marketplace."
+> "**Distribuição:** repositório `kayoridolfi-ai-plugin` no GitHub, exposto como marketplace."
 >
 > "**Plugin obrigatório:** `kai-ai-core` carrega constitution, hooks bloqueantes de segurança, allowlist de MCPs. Todo squad usando IA carrega isso."
 >
@@ -313,12 +313,12 @@ Cada slide tem: **Conteúdo visual sugerido** + **Falas-chave** + **Tempo** + **
 | Treinamento Tech Leads (4h × N TLs) | esforço pontual |
 | Treinamento AI Champions (8h × N Champions) | esforço pontual |
 | Tokens IA adicionais (overhead do harness) | ~5-10% sobre uso atual |
-| Infraestrutura | nenhuma na v0.1 (usa GitHub Enterprise) |
+| Infraestrutura | nenhuma na v0.1 (usa GitHub) |
 
 **Falas-chave:**
 > "Custo direto: tempo do maintainers (20% FTE) + treinamento pontual + ~5-10% extra em tokens IA pelo overhead do harness (constitution, hooks, audit)."
 >
-> "Sem infra adicional na v0.1 — tudo via GitHub Enterprise existente."
+> "Sem infra adicional na v0.1 — tudo via GitHub existente."
 >
 > "Custo evitado: vazamento de segredo (~R$ 100k-1M+ por incidente), retrabalho em features mal-especificadas (~30% do tempo de squad sem SDD), incidente regulatório."
 
@@ -370,7 +370,7 @@ Cada slide tem: **Conteúdo visual sugerido** + **Falas-chave** + **Tempo** + **
 >
 > 📧 kayocdi@gmail.com
 > 💬 #kai-ai-plugin no Slack
-> 📁 kayorid/kai-ai-sdk no GitHub Enterprise
+> 📁 kayorid/kayoridolfi-ai-plugin no GitHub
 >
 > **Documentos:**
 > - Design Completo (40+ páginas)
@@ -415,7 +415,7 @@ Cada slide tem: **Conteúdo visual sugerido** + **Falas-chave** + **Tempo** + **
 
 ### "Posso ver o código?"
 
-> "Sim, repositório `kayorid/kai-ai-sdk` no GitHub Enterprise. Aberto a qualquer dev. Inspecionem, abram issue, proponham PR."
+> "Sim, repositório `kayorid/kayoridolfi-ai-plugin` no GitHub. Aberto a qualquer dev. Inspecionem, abram issue, proponham PR."
 
 ---
 

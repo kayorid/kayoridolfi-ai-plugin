@@ -7,7 +7,7 @@
     {
       "name": "github",
       "publisher": "official",
-      "purpose": "Operações em repositórios GitHub Enterprise",
+      "purpose": "Operações em repositórios GitHub",
       "risk_level": "low",
       "data_exfiltration_review": "passed",
       "approved_at": "2026-05-10",

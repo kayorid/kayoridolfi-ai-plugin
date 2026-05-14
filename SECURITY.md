@@ -2,7 +2,7 @@
 
 ## Reportando uma vulnerabilidade
 
-O Kayoridolfi AI lida com hooks bloqueantes em ambiente de desenvolvimento de uma projeto em ambiente regulado. Vulnerabilidades têm impacto potencial sério (vazamento de segredos, bypass de proteções, falha em auditoria regulatória).
+O Kayoridolfi AI implementa hooks bloqueantes que interceptam tool calls do Claude Code. Vulnerabilidades nesse mecanismo têm impacto potencial sério: vazamento de segredos, bypass de proteções, ou falha de auditoria.
 
 ### Como reportar
 
